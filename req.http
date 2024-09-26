@@ -3,7 +3,7 @@ POST http://localhost:8080/api/users/register
 Content-Type: application/json
 
 {
-  "username": "asep",
+  "username": "asepe",
   "email": "asep@example.com",
   "password": "password123"
 }
@@ -18,3 +18,66 @@ Content-Type: application/json
   "password": "password123"
 }
 
+### Get
+GET http://localhost:8080/api/users/all
+
+### Create Todo
+POST http://localhost:8080/api/checklist
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcGUiLCJpYXQiOjE3MjczNTAxODgsImV4cCI6MTcyNzQzNjU4OH0.dPRviw_Ry7MUhisdIG14FrtGWrd7flSgSgT2E7M2wPE
+
+{
+
+  "title": "Rencanaede hariini"
+}
+
+### todo
+DELETE  http://localhost:8080/api/checklist/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcGUiLCJpYXQiOjE3MjczNTAxODgsImV4cCI6MTcyNzQzNjU4OH0.dPRviw_Ry7MUhisdIG14FrtGWrd7flSgSgT2E7M2wPE
+
+###GET tODO
+GET http://localhost:8080/api/checklist/All
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcGUiLCJpYXQiOjE3MjczNTAxODgsImV4cCI6MTcyNzQzNjU4OH0.dPRviw_Ry7MUhisdIG14FrtGWrd7flSgSgT2E7M2wPE
+
+### Create list
+POST http://localhost:8080/api/checklist/2/item
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcGUiLCJpYXQiOjE3MjczNTAxODgsImV4cCI6MTcyNzQzNjU4OH0.dPRviw_Ry7MUhisdIG14FrtGWrd7flSgSgT2E7M2wPE
+
+{
+
+  "itemName": "makanan hariini"
+}
+
+### Getall
+GET  http://localhost:8080/api/checklist/2/item
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcCIsImlhdCI6MTcyNzM0NTkzMSwiZXhwIjoxNzI3NDMyMzMxfQ.Q46G768U9qSHTLgN53wcYOp83u8bgIh84KxmtkOUe4A
+
+### Get by id
+GET  http://localhost:8080/api/checklist/2/item/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcCIsImlhdCI6MTcyNzM0NTkzMSwiZXhwIjoxNzI3NDMyMzMxfQ.Q46G768U9qSHTLgN53wcYOp83u8bgIh84KxmtkOUe4A
+
+### Checked
+PUT  http://localhost:8080/api/checklist/2/item/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcCIsImlhdCI6MTcyNzM0NTkzMSwiZXhwIjoxNzI3NDMyMzMxfQ.Q46G768U9qSHTLgN53wcYOp83u8bgIh84KxmtkOUe4A
+
+
+### Update list
+PUT http://localhost:8080/api/checklist/2/item/rename/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcGUiLCJpYXQiOjE3MjczNTAxODgsImV4cCI6MTcyNzQzNjU4OH0.dPRviw_Ry7MUhisdIG14FrtGWrd7flSgSgT2E7M2wPE
+
+{
+
+  "itemName": "makan"
+}
+
+### Delete
+DELETE  http://localhost:8080/api/checklist/2/item/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcCIsImlhdCI6MTcyNzM0NTkzMSwiZXhwIjoxNzI3NDMyMzMxfQ.Q46G768U9qSHTLgN53wcYOp83u8bgIh84KxmtkOUe4A

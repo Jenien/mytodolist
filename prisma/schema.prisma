@@ -13,5 +13,29 @@ model User {
   email        String    @unique
   password     String
   createdAt    DateTime  @default(now())
+  todos        Todo[]    @relation("UserTodos")
 }
 
+model Todo {
+  todoId     Int        @id @default(autoincrement())
+  title      String
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt @default(now())
+
+  // Relasi ke User
+  userId     Int
+  user       User       @relation("UserTodos", fields: [userId], references: [userId])
+
+  // Relasi ke Checklist
+  checklists Checklist[]
+}
+
+model Checklist {
+  checklistId  Int       @id @default(autoincrement())
+  itemName     String
+  isChecked     Boolean @default(false)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt @default(now())
+  todoId       Int
+  todo         Todo      @relation(fields: [todoId], references: [todoId])
+}

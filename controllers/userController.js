@@ -45,7 +45,7 @@ const login = async (req, res, next) => {
       });
     }
 
-    // Buat payload token JWT dengan informasi pengguna
+
     const payload = {
       userId: user.userId,
       email: user.email,
@@ -54,7 +54,7 @@ const login = async (req, res, next) => {
 
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1d" });
 
-    // Mengembalikan token JWT dan profil pengguna dalam respons
+    
     return res.status(200).json({
       success: true,
       message: "Login successful",

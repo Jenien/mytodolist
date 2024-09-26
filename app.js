@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes');
+const todoRoutes= require('./routes/todoRoutes');
+const listRoutes= require('./routes/listRoutes');
 const { authenticateToken } = require('./middlewares/auth');
 const  morgan = require('morgan');
 
@@ -11,7 +13,8 @@ app.use (morgan('dev'));
 app.use(bodyParser.json());
 
 app.use('/api/users', userRoutes);
-
+app.use('/api/checklist', todoRoutes);
+app.use('/api/checklist', listRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
